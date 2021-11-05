@@ -59,7 +59,7 @@ const StoreComponent = () => {
 
     return (
         <div  className='M-15px'>
-            <div className='row'>
+            <div className='row Mb-15px'>
                 <div className='col-sm-6'></div>
                 <div className='col-sm-4'>
                     <input className='form-control' type='file' id='upload'
@@ -69,7 +69,7 @@ const StoreComponent = () => {
             </div>
             <div className='row'>
                 <div className='col-sm-10'>
-                    <table className='table'>
+                    <table className='table table-striped table-bordered'>
                         <thead>
                             <tr>
                             {
@@ -108,7 +108,7 @@ const StoreComponent = () => {
                                                     <div className='col-sm-3'>
                                                         <button className='btn btn-primary'
                                                             onClick={()=>setQty(idx, true)}
-                                                            disabled={prd.picked > prd.productStock}>
+                                                            disabled={prd.picked >= prd.productStock}>
                                                             +</button>
                                                     </div>
                                                 </div>
